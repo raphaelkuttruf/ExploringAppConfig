@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ExploringAppConfig
 {
@@ -10,6 +6,10 @@ namespace ExploringAppConfig
     {
         static void Main(string[] args)
         {
+            string username = "Raphael Kuttruf";
+            Console.WriteLine($"Hello {username}");
+
+            Console.ReadLine();
         }
     }
 }
