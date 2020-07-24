@@ -27,7 +27,26 @@ namespace ExploringAppConfig
             Console.WriteLine($"Your configured user name is: {userNameInAppConfig}");
             Console.WriteLine($"Your configured user ID is: {userIDInAppConfig}");
 
+
+            Console.WriteLine(Properties.Settings.Default.Test_ID);
+            Properties.Settings.Default.Test_ID = 555;
+            Console.WriteLine(Properties.Settings.Default.Test_ID);
+            Properties.Settings.Default.Save();
+
+            if (Properties.MoreSettings.Default.I_Want_More)
+            {
+                Properties.MoreSettings.Default.I_Want_More = false;
+                Console.WriteLine(Properties.MoreSettings.Default.More);
+            }
+            else
+            {
+                Console.WriteLine("Do you want more cookies?");
+                Properties.MoreSettings.Default.I_Want_More = true;
+            }
+            Properties.MoreSettings.Default.Save();
+
             Console.ReadLine();
+
         }
     }
 }
